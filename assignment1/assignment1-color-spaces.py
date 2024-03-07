@@ -24,7 +24,7 @@ upper_red = np.array([bgr2hsv_range([0,0,255])[0][0][0] + sensitivity,255,255])
 
 # Track using images
 
-image = cv.imread("computer-vision-bootcamp/image-processing/bgr.jpg")
+image = cv.imread("computer-vision-bootcamp/assignment1/bgr1.jpg")
 if image is not None:
     resized_image = cv.resize(image, (200,200))
     image_hsv = cv.cvtColor(resized_image, cv.COLOR_BGR2HSV)
