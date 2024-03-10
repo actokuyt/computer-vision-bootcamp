@@ -1,0 +1,121 @@
+These are the various functions encounterred so far in this bootcamp
+
+
+* cv::imread: This function is used to read an image from a file. It takes the file path as its first argument and an optional second argument specifying the format in which to read the image. Here, the image is loaded in the BGR 8-bit format by default.
+
+    Python equivalent: cv.imread()
+
+    Example:
+    import cv2 as cv
+
+    # Read an image
+    img = cv.imread('starry_night.jpg')
+
+
+* cv::imshow: This function is used to display an image in an OpenCV window. It takes the title of the window as its first argument and the image (stored as a cv::Mat object) as its second argument.
+
+    Python equivalent: cv.imshow()
+
+    Example:
+    import cv2 as cv
+
+    # Display the image in a window titled 'image'
+    cv.imshow('image', img)
+
+
+*cv::waitKey: This function is used to wait for a keyboard event for a specified amount of time. It takes the time to wait (in milliseconds) as its only parameter. Zero means to wait forever. The return value is the key that was pressed.
+
+    Python equivalent: cv.waitKey()
+
+    Example:
+    import cv2 as cv
+
+    # Wait for a key press for 0 milliseconds (wait indefinitely)
+    key = cv.waitKey(0)
+
+
+*cv::imwrite: This function is used to write an image to a file. It takes the file path as its first argument and the image (stored as a cv::Mat object) as its second argument.
+
+    Python equivalent: cv.imwrite()
+
+    Example:
+    import cv2 as cv
+
+    # Write the image to a file named 'output.jpg'
+    cv.imwrite('output.jpg', img)
+
+
+*cv.VideoCapture(): This function is used to capture video either from a camera (by specifying the device index) or from a video file (by specifying the file path). It returns a VideoCapture object.
+
+    Python equivalent: cv.VideoCapture()
+
+    Example:
+    import cv2 as cv
+
+    # Capture video from camera (device index 0)
+    cap = cv.VideoCapture(0)
+
+    # Capture video from a file
+    cap = cv.VideoCapture('video.mp4')
+
+
+*cv.VideoWriter(): This function is used to create a VideoWriter object for saving video to a file. It takes the output file name, FourCC codec, frames per second (fps), frame size, and isColor flag as arguments.
+
+    Python equivalent: cv.VideoWriter()
+
+    Example:
+    import cv2 as cv
+
+    # Define codec and create VideoWriter object
+    fourcc = cv.VideoWriter_fourcc(*'XVID')
+    out = cv.VideoWriter('output.avi', fourcc, 20.0, (640, 480))
+
+
+*cv.VideoCapture::read(): This method reads the next frame from the video capture object and returns a tuple containing a boolean indicating whether the frame was successfully read (True or False) and the frame itself.
+
+    Python equivalent: cv.VideoCapture.read()
+
+    Example:
+    ret, frame = cap.read()
+    cv.cvtColor(): This function is used to convert the color space of an image. Here, it is used to convert the captured frame to grayscale.
+
+    Python equivalent: cv.cvtColor()
+
+    Example:
+
+    python
+    Copy code
+    gray = cv.cvtColor(frame, cv.COLOR_BGR2GRAY)
+
+
+*cv.flip(): This function is used to flip the image vertically, horizontally, or both. Here, it is used to flip each frame vertically.
+
+    Python equivalent: cv.flip()
+
+    Example:
+    frame = cv.flip(frame, 0)  # Vertical flip
+
+
+*cv.imshow(): This function is used to display an image or a video frame in a window.
+
+    Python equivalent: cv.imshow()
+
+    Example:
+    cv.imshow('frame', frame)
+
+
+*cv.waitKey(): This function waits for a key press for a specified amount of time. It returns the ASCII value of the pressed key.
+
+    Python equivalent: cv.waitKey()
+
+    Example:
+    if cv.waitKey(1) == ord('q'):
+        break
+
+
+*cv.VideoWriter::write(): This method writes a frame to the video file specified by the VideoWriter object.
+
+    Python equivalent: cv.VideoWriter.write()
+
+    Example:
+    out.write(frame)

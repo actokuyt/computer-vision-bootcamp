@@ -44,16 +44,6 @@ M = cv.getPerspectiveTransform(pts1,pts2)
  
 perspective_transformed_img = cv.warpPerspective(img,M,(300,300))
 
-
-
-
-# cv.imshow("Original", img )
-# cv.imshow("Scaled Image", scaled_img)
-# cv.imshow('Translated Image',translated_img)
-# cv.imshow("Rotated Image", rotated_img)
-# cv.imshow("Affine Transformed Image", affine_transformed_img)
-# cv.imshow("Perspective Transformed Image", perspective_transformed_img)
-
 plt.subplot(231), plt.imshow(img), plt.title('Original')
 plt.subplot(232), plt.imshow(scaled_img), plt.title('Scaled')
 plt.subplot(233), plt.imshow(translated_img), plt.title('Translated')
@@ -62,6 +52,3 @@ plt.subplot(235), plt.imshow(affine_transformed_img), plt.title('Affine Transfor
 plt.subplot(236), plt.imshow(perspective_transformed_img), plt.title('Perspective Transformed')
 
 plt.show()
-
-# cv.waitKey(0)
-# cv.destroyAllWindows()
