@@ -3,8 +3,8 @@ import numpy as np
 
 
 sensitivity = 10
-image = cv.imread("computer-vision-bootcamp/assignment1/bgr.jpg")
-video = cv.VideoCapture("computer-vision-bootcamp/assignment1/bgr.mp4")
+image = cv.imread("computer-vision-bootcamp/assignment1-img&vid-manipulations/bgr.jpg")
+video = cv.VideoCapture("computer-vision-bootcamp/assignment1-img&vid-manipulations/bgr.mp4")
 input_source = input("What do you want to use as input, image?, video? or cam-feed?:")
 
 def bgr2hsv_range (bgr_color):
