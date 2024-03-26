@@ -3,8 +3,8 @@ import numpy as np
 
 
 sensitivity = 10
-image = cv.imread("computer-vision-bootcamp/assignment1-img&vid-manipulations/bgr.jpg")
-video = cv.VideoCapture("computer-vision-bootcamp/assignment1-img&vid-manipulations/bgr.mp4")
+image = cv.imread("bgr.jpg")
+video = cv.VideoCapture("bgr.mp4")
 input_source = input("What do you want to use as input, image?, video? or cam-feed?:")
 
 def bgr2hsv_range (bgr_color):
@@ -45,11 +45,11 @@ if input_source == "image" :
     k = cv.waitKey(0) & 0xFF
 
     if k == 115:
-        cv.imwrite('computer-vision-bootcamp/assignment1/original.jpg',resized_image)
-        cv.imwrite('computer-vision-bootcamp/assignment1/red-tracked.jpg',res_red)
-        cv.imwrite('computer-vision-bootcamp/assignment1/greentracked.jpg',res_green)
-        cv.imwrite('computer-vision-bootcamp/assignment1/bluetracked.jpg',res_blue)
-        cv.imwrite('computer-vision-bootcamp/assignment1/combined.jpg',res_combined)
+        cv.imwrite('original.jpg',resized_image)
+        cv.imwrite('red-tracked.jpg',res_red)
+        cv.imwrite('greentracked.jpg',res_green)
+        cv.imwrite('bluetracked.jpg',res_blue)
+        cv.imwrite('combined.jpg',res_combined)
 
 
     cv.destroyAllWindows()
@@ -121,14 +121,6 @@ elif input_source == "cam-feed":
 
         # save and break if 's' is pressed or break if esc is pressed
         k = cv.waitKey(5) & 0xFF
-
-        if k == 115:
-            cv.imwrite('computer-vision-bootcamp/assignment1/original.jpg',resized_frame)
-            cv.imwrite('computer-vision-bootcamp/assignment1/red-tracked.jpg',res_red)
-            cv.imwrite('computer-vision-bootcamp/assignment1/greentracked.jpg',res_green)
-            cv.imwrite('computer-vision-bootcamp/assignment1/bluetracked.jpg',res_blue)
-            cv.imwrite('computer-vision-bootcamp/assignment1/combined.jpg',res_combined)
-            break
 
         if k == 27:
             break

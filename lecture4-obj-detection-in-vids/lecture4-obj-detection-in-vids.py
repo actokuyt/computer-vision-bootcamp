@@ -2,9 +2,9 @@ from ultralytics import YOLO
 import cv2
 
 
-model = YOLO("computer-vision-bootcamp/venv/yolov8n.pt")
+model = YOLO('yolov8n.pt')
 
-cap =cv2.VideoCapture("computer-vision-bootcamp/lecture4-obj-detection-in-vids/221125_02_London Christmas 2_4k_013.mp4")
+cap =cv2.VideoCapture('ppl_vid.mp4')
 while True:
     success,frame = cap.read()
     result = model(frame)
@@ -27,7 +27,7 @@ while True:
             
             cv2.imshow("Result", frame)
     
-    if cv2.waitKey(10) & 0xFF == ord("w"):
+    if cv2.waitKey(10) & 0xFF == ord("q"):
         break
 
 cap.release()

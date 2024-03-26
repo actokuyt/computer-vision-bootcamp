@@ -1,16 +1,16 @@
 import cv2 as cv 
 
 
-cap = cv.VideoCapture("computer-vision-bootcamp/lecture2/bgr.mp4")
+cap = cv.VideoCapture("bgr.mp4")
 
 fourcc = cv.VideoWriter_fourcc(*'mp4v')
-output = cv.VideoWriter('computer-vision-bootcamp/lecture2/out.mp4',fourcc,30,(400,200))
+output = cv.VideoWriter('out.mp4',fourcc,30,(400,200))
 
 while cap.isOpened:
     ret, frame  = cap.read()
 
     if not ret:
-        cap = cv.VideoCapture("computer-vision-bootcamp/assignment1/bgr.mp4")
+        cap = cv.VideoCapture("bgr.mp4")
         continue
 
     frame = cv.resize(frame,(400,200))

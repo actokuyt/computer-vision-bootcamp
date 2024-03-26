@@ -1,8 +1,8 @@
 from  ultralytics import  YOLO
 import cv2
 
-model = YOLO("computer-vision-bootcamp/venv/yolov8n.pt")
-image = cv2.imread("computer-vision-bootcamp/lecture3-obj-detection/ppl-img.jpg")
+model = YOLO("yolov8n.pt")
+image = cv2.imread("ppl-img.jpg")
 
 results = model(image)
 

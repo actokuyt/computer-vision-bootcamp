@@ -1,0 +1,3 @@
+train: "train/images"
+valid: "valid/images"
+test: "test/images"

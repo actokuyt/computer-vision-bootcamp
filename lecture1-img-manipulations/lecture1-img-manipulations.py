@@ -8,7 +8,7 @@ def save_and_display_image(image_name, processed_image):
     # This will open a window on our pc to display our image.
 
 
-image = cv2.imread("computer-vision-bootcamp/lecture1/image.jpg")
+image = cv2.imread("image.jpg")
 assert image is not None, "file could not be read, check with os.path.exists()"
 # This will open the image at the provided path in a numpy format which is how the computer is able to read and
 # modify the image.
