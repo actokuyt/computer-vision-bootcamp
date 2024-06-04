@@ -5,7 +5,7 @@ import cv2
 model = YOLO('yolov8n.pt')  # pretrained YOLOv8n model
 # Run batched inference on a list of images
 images = [cv2.imread('cars-img.jpg'),
-          cv2.imread('off-img.jpg'), cv2.imread('ppl-img.jpg'), cv2.imread('image.jpeg')]
+          cv2.imread('off-img.jpg'), cv2.imread('ppl-img.jpg')]
 
 
 def resize_images(imgs):
